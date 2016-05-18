@@ -1,5 +1,10 @@
 language: android
 android:
   components:
-  - build-tools-23.0.3
+  - build-tools-23.0.1
+  - extra-android-m2repository
   - android-23
+notifications:
+  email: false
+sudo: required
+script: gradle build --stacktrace
