@@ -1,4 +1,5 @@
 # FlowManager
+[![Build Status](https://travis-ci.org/Lighture/FlowManager.svg?branch=master)](https://travis-ci.org/Lighture/FlowManager)
 Flow manager is helper class for executing multiple synchronous or asynchronous actions in set order.
 
 Usage example:
