@@ -48,6 +48,6 @@ allprojects {
 Add the dependency:
 ```
 dependencies {
-        compile 'com.github.Lighture:FlowManager:0.1'
+        compile 'com.github.Lighture:FlowManager:0.2'
 }
 ```
