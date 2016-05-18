@@ -1,8 +1,10 @@
 # FlowManager
+
 [![Build Status](https://travis-ci.org/Lighture/FlowManager.svg?branch=master)](https://travis-ci.org/Lighture/FlowManager)
+
 Flow manager is helper class for executing multiple synchronous or asynchronous actions in set order.
 
-Usage example:
+## Usage example:
 ```
 FlowManagerFactory.newInstance()
           .addAction(new Action() {
@@ -34,7 +36,7 @@ FlowManagerFactory.newInstance()
           .start();
 ```
 
-Gradle:
+## Gradle:
 
 Add it in your root build.gradle at the end of repositories:
 ```
