@@ -25,8 +25,7 @@ public interface Flow {
     /**
      * Insert action after actual action.<br/>
      * <br/>
-     * <b>Note:</b> calling this method multiple times in a row will reverse the order in which were they called.<br/>
-     * For adding multiple actions in correct order, call {@link Flow#insertActions(Action...)} or {@link Flow#insertActions(List)}.
+     * You can also call {@link Flow#insertActions(Action...)} or {@link Flow#insertActions(List)}.
      *
      * @param action Action to insert
      */

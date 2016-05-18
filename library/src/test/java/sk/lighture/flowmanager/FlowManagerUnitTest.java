@@ -643,7 +643,7 @@ public class FlowManagerUnitTest {
                 flow.insertAction(new Action() {
                     @Override
                     public void execute(Flow flow) {
-                        assertEquals(2, counter);
+                        assertEquals(1, counter);
                         counter++;
                         flow.nextAction();
                     }
@@ -651,7 +651,7 @@ public class FlowManagerUnitTest {
                 flow.insertAction(new Action() {
                     @Override
                     public void execute(Flow flow) {
-                        assertEquals(1, counter);
+                        assertEquals(2, counter);
                         counter++;
                         flow.nextAction();
                     }

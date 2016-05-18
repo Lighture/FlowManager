@@ -18,9 +18,12 @@ class FlowManagerImpl implements FlowManager {
     private List<Action> actions;
     private int actual;
 
+    private List<Action> actionsToInsert;
+
     public FlowManagerImpl() {
         flow = new FlowImpl();
         actions = new ArrayList<>();
+        actionsToInsert = new ArrayList<>();
         restartState();
     }
 
@@ -75,6 +78,10 @@ class FlowManagerImpl implements FlowManager {
     }
 
     private void executeNext() {
+        if(actionsToInsert.size() > 0) {
+            actions.addAll(actual + 1, actionsToInsert);
+            actionsToInsert.clear();
+        }
         if (actual + 1 >= actions.size()) {
             callFinishListener();
         } else {
@@ -136,7 +143,7 @@ class FlowManagerImpl implements FlowManager {
 
         @Override
         public void insertAction(Action action) {
-            actions.add(actual + 1, action);
+            actionsToInsert.add(action);
         }
 
         @Override
@@ -146,7 +153,7 @@ class FlowManagerImpl implements FlowManager {
 
         @Override
         public void insertActions(List<Action> actions) {
-            FlowManagerImpl.this.actions.addAll(actual + 1, actions);
+            actionsToInsert.addAll(actions);
         }
 
         @Override
